@@ -1,8 +1,12 @@
 import React from 'react'
-import Counter from './component/Counter'
+import CountersList from './component/CountersList'
 
 const App = () => {
-	return <Counter />
+	return (
+		<>
+			<CountersList />
+		</>
+	)
 }
 
 export default App

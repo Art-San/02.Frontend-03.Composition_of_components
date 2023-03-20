@@ -22,7 +22,7 @@ const Counter = () => {
 	}
 
 	return (
-		<>
+		<div>
 			<span className={getBageClasses()}>{formatCount()}</span>
 			<button
 				className='btn btn-primary btn-sm m-2'
@@ -36,7 +36,7 @@ const Counter = () => {
 			>
 				-
 			</button>
-		</>
+		</div>
 	)
 }
 
