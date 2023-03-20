@@ -24,6 +24,7 @@ const Counter = (props) => {
 
 	return (
 		<div>
+			<span>{props.name}</span>
 			<span className={getBageClasses()}>{formatValue()}</span>
 			<button
 				className='btn btn-primary btn-sm m-2'
