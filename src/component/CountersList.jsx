@@ -10,7 +10,7 @@ const CountersList = () => {
 	return (
 		<>
 			{couunters.map(count => (
-				<Counter key={count.id} count={count} />
+				<Counter key={count.id} value={count.value} />
 			))}
 		</>
 	)
