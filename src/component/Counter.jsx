@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
 const Counter = (props) => {
-	console.log('value', props)
 	const [value, setValue] = useState(props.value)
 
 	const formatValue = () => {
@@ -39,7 +38,7 @@ const Counter = (props) => {
 				-
 			</button>
 			<button
-				onClick={() => props.onDelete()}
+				onClick={() => props.onDelete(props.id)}
 				className='btn btn-danger btn-sm m-2'
 			>
 				Delete

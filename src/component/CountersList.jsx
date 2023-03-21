@@ -11,14 +11,16 @@ const CountersList = () => {
 	])
 
 	const handleDelete = (id) => {
-		console.log('hendelDelete')
-		// setCounters(prevState => prevState.filter(t => t !== id))
+		// setCounters((prevState) => prevState.filter((c) => c.id !== id))
+		const newCounters = couunters.filter((c) => c.id !== id)
+		setCounters(newCounters)
 	}
 	return (
 		<>
 			{couunters.map((count) => (
 				<Counter
 					key={count.id}
+					id={count.id}
 					value={count.value}
 					name={count.name}
 					onDelete={handleDelete}
