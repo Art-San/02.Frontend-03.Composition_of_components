@@ -3,7 +3,7 @@ import Counter from './Counter'
 
 const CountersList = () => {
 	const [couunters, setCounters] = useState([
-		{ id: 0, value: 0, name: 'Ненужная вещь' },
+		{ id: 0, value: 0, name: 'Ненужная вещь', price: '200' },
 		{ id: 1, value: 4, name: 'Ложка' },
 		{ id: 2, value: 0, name: 'Вилка' },
 		{ id: 3, value: 0, name: 'Тарелка' },
@@ -18,13 +18,7 @@ const CountersList = () => {
 	return (
 		<>
 			{couunters.map((count) => (
-				<Counter
-					key={count.id}
-					id={count.id}
-					value={count.value}
-					name={count.name}
-					onDelete={handleDelete}
-				/>
+				<Counter key={count.id} onDelete={handleDelete} {...count} />
 			))}
 		</>
 	)
