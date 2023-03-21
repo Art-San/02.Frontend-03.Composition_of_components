@@ -13,6 +13,13 @@ const Counter = (props) => {
 		return classes
 	}
 
+	// const handleIncrement = () => {
+	//     props.onIncrement(props.id);
+	// };
+	// const handleDecrement = () => {
+	//     props.onDecrement(props.id);
+	// };
+
 	return (
 		<div>
 			<span>{props.name}</span>
@@ -20,12 +27,14 @@ const Counter = (props) => {
 			<button
 				className='btn btn-primary btn-sm m-2'
 				onClick={() => props.onIncrement(props.id)}
+				// onClick={handleIncrement}
 			>
 				+
 			</button>
 			<button
 				className='btn btn-primary btn-sm'
 				onClick={() => props.onDecrement(props.id)}
+				// onClick={handleDecrement}
 			>
 				-
 			</button>

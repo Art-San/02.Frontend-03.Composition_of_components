@@ -19,29 +19,54 @@ const CountersList = () => {
 	const handleReset = () => {
 		setCounters(initialState)
 	}
+	// ПЕРВЫЙ ВАРИАНТ
+
+	// const handleIncrement = (id) => {
+	// 	setCounters(
+	// 		counters.map((item) => {
+	// 			if (item.id === id) {
+	// 				return { ...item, value: item.value + 1 }
+	// 			} else {
+	// 				return item
+	// 			}
+	// 		})
+	// 	)
+	// }
+
+	// ВТОРОЙ ВАРИАНТ
 
 	const handleIncrement = (id) => {
-		setCounters(
-			counters.map((item) => {
-				if (item.id === id) {
-					return { ...item, value: item.value + 1 }
-				} else {
-					return item
-				}
-			})
-		)
+		const elementIndex = counters.findIndex((el) => el.id === id)
+		const newCounters = [...counters]
+		newCounters[elementIndex].value++
+		setCounters(newCounters)
+
+		// console.log(newCounters)
 	}
 
+	// ПЕРВЫЙ ВАРИАНТ
+
+	// const handleDecrement = (id) => {
+	// 	setCounters(
+	// 		counters.map((item) => {
+	// 			if (item.id === id) {
+	// 				return { ...item, value: item.value - 1 }
+	// 			} else {
+	// 				return item
+	// 			}
+	// 		})
+	// 	)
+	// }
+
+	// ВТОРОЙ ВАРИАНТ
+
 	const handleDecrement = (id) => {
-		setCounters(
-			counters.map((item) => {
-				if (item.id === id) {
-					return { ...item, value: item.value - 1 }
-				} else {
-					return item
-				}
-			})
-		)
+		const elementIndex = counters.findIndex((el) => el.id === id)
+		const newCounters = [...counters]
+		newCounters[elementIndex].value--
+		setCounters(newCounters)
+
+		// console.log(newCounters)
 	}
 
 	return (
